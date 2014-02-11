@@ -16,6 +16,7 @@
 @implementation ViewController
 {
     GMSMapView *mapView_;
+    __weak IBOutlet UITableView *Decal;
 }
 
 - (void)viewDidLoad
@@ -37,6 +38,14 @@
     marker.title = @"Sydney";
     marker.snippet = @"Australia";
     marker.map = mapView_;
+}
+- (IBAction)touchOnDecalAction:(id)sender {
+    Decal.allowsSelection = TRUE;
+    }
+- (IBAction)touchOnAnnouncementsAction:(id)sender {
+}
+
+- (IBAction)touchOnSettingsAction:(id)sender {
 }
 
 - (void)didReceiveMemoryWarning
